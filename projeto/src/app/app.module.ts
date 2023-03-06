@@ -7,7 +7,18 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { HeaderComponent } from './template/header/header.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { HeaderComponent } from './components/template/header/header.component';
+import { FooterComponent } from './components/template/footer/footer.component';
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { NavComponent } from './components/template/nav/nav.component';
+
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatListModule} from '@angular/material/list'
+
 
 @NgModule({
   declarations: [
@@ -16,11 +27,18 @@ import { HeaderComponent } from './template/header/header.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
