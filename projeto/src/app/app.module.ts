@@ -19,6 +19,11 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule} from '@angular/material/list'
 
+import {MatMenuModule} from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { ViagensComponent } from './pages/viagens/viagens.component';
+
+
 
 @NgModule({
   declarations: [
@@ -30,6 +35,7 @@ import { MatListModule} from '@angular/material/list'
     HeaderComponent,
     FooterComponent,
     NavComponent,
+    ViagensComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,9 @@ import { MatListModule} from '@angular/material/list'
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule,
+    MatButtonModule
 
   ],
   providers: [],

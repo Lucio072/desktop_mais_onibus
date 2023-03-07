@@ -1,8 +1,51 @@
 <mat-toolbar class="header mat-elevation-z4">
   <span>
     <a>
-      <img class="logo" src="assets/img/logo.png" alt="logo">
+      <img [routerLink]="['/home']" class="logo" src="assets/img/logo.png" alt="logo">
     </a>
   </span>
+  
+  
 
+  
+  <button class="bnt" mat-flat-button color="none" [matMenuTriggerFor]="aboveMenu">Viagens
+    <div class="line"></div>
+  </button>
+  <mat-menu #aboveMenu="matMenu" yPosition="above">
+   <button [routerLink]="['/viagens']" mat-menu-item>Item 1</button>
+   
+  </mat-menu>
+  <div class="line"></div>
+  
+  <button class="bnt" mat-flat-button color="none" [matMenuTriggerFor]="belowMenu">Registros
+    <div class="line"></div>
+  </button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+   <button mat-menu-item>Frota</button>
+   <button mat-menu-item>Rotas</button>
+   <button mat-menu-item>Filiais</button>
+   <button mat-menu-item>Funcionarios</button>
+   <button mat-menu-item>Brilhetagem</button>
+  </mat-menu>
+  <div class="line"></div>
+  
+  
+  <button class="bnt" mat-flat-button color="none" [matMenuTriggerFor]="beforeMenu">Receita
+    <div class="line"></div>
+  </button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+   <button mat-menu-item>Item 1</button>
+   <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  
+  
+  
+  <button class="bnt" mat-flat-button color="none" [matMenuTriggerFor]="afterMenu">Preferencias
+    <div class="line"></div>
+  </button>
+  <mat-menu #afterMenu="matMenu" xPosition="after">
+   <button mat-menu-item>Item 1</button>
+   <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  
 </mat-toolbar>

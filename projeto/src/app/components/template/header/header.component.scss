@@ -1,17 +1,26 @@
-.header{
+.header {
   display: flex;
   align-items: center;
   background-color: #50C2C9;
-  max-height: 68px;
-  a{
+  max-height: 49px;
+
+  a {
     display: flex;
     align-items: center;
     text-decoration: none;
   }
 
-  .logo{
+  .logo {
     max-height: 54px;
     padding-left: 244px;
+    padding-right: 45px;
+  }
+  .line{
+    border-bottom: 7px solid #000;
+  }
+  .bnt{
+    padding-bottom: 0px;
+    padding-top: 10px;
   }
 }
 
