@@ -1,1 +1,35 @@
-<p>register works!</p>
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Cadastro</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>Nome</mat-label>
+          <input matInput formControlName="nome" required>
+          <mat-error *ngIf="cadastroForm.controls.nome.errors?.required">Campo obrigatório</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>E-mail</mat-label>
+          <input matInput formControlName="email" type="email" required>
+          <mat-error *ngIf="cadastroForm.controls.email.errors?.required">Campo obrigatório</mat-error>
+          <mat-error *ngIf="cadastroForm.controls.email.errors?.email">E-mail inválido</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Senha</mat-label>
+          <input matInput formControlName="senha" type="password" required>
+          <mat-error *ngIf="cadastroForm.controls.senha.errors?.required">Campo obrigatório</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Confirme sua senha</mat-label>
+          <input matInput formControlName="confirmarSenha" type="password" required>
+          <mat-error *ngIf="cadastroForm.controls.confirmarSenha.errors?.required">Campo obrigatório</mat-error>
+          <mat-error *ngIf="cadastroForm.controls.confirmarSenha.errors?.notEquivalent">Senhas não conferem</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="cadastroForm.invalid || cadastroForm.pending">
+          Cadastrar
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  

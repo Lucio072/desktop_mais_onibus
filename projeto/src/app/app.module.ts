@@ -22,7 +22,9 @@ import { MatListModule} from '@angular/material/list'
 import {MatMenuModule} from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { ViagensComponent } from './pages/viagens/viagens.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -36,8 +38,10 @@ import { ViagensComponent } from './pages/viagens/viagens.component';
     FooterComponent,
     NavComponent,
     ViagensComponent,
+    
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -45,7 +49,11 @@ import { ViagensComponent } from './pages/viagens/viagens.component';
     MatSidenavModule,
     MatListModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
 
   ],
   providers: [],

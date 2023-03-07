@@ -1,0 +1,33 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  mat-card {
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  mat-card-header {
+    background-color: #1976d2;
+    color: #fff;
+  }
+  
+  mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-top: 16px;
+  }
+  
+  button {
+    margin-top: 16px;
+    width: 100%;
+  }
+  
