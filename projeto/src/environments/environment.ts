@@ -1,7 +1,9 @@
+
+
 export const environment = {
 
   production: false,
-  firebaseConfig:
+  firebase:
   {
     apiKey: 'AIzaSyBoyuUeumF3kcGMdQOr83kE6k9yUSMus3c',
     authDomain: 'mais-onibus.firebaseapp.com',

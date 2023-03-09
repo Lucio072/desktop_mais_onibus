@@ -27,9 +27,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
-import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { initializeApp } from 'firebase/app';
+
+
+
 
 
 
@@ -63,8 +67,9 @@ import { AngularFireModule } from '@angular/fire/compat';
     MatInputModule,
     MatCardModule,
     MatIconModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFireModule.initializeApp(environment.firebase),
+     AngularFirestoreModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
