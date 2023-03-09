@@ -27,8 +27,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
-import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+
 
 
 
@@ -47,7 +49,6 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
   ],
   imports: [
-
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -62,11 +63,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     MatInputModule,
     MatCardModule,
     MatIconModule,
-    AngularFireModule,
-    AngularFirestoreModule,
-
-
-
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
