@@ -27,6 +27,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 
 
 @NgModule({
@@ -40,10 +43,11 @@ import {MatIconModule} from '@angular/material/icon';
     FooterComponent,
     NavComponent,
     ViagensComponent,
-    
+
+
   ],
   imports: [
-    
+
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -57,7 +61,11 @@ import {MatIconModule} from '@angular/material/icon';
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    AngularFireModule,
+    AngularFirestoreModule,
+
+
 
   ],
   providers: [],
